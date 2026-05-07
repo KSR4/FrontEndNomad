@@ -1,0 +1,73 @@
+﻿
+> my-appts@0.0.0 check
+> svelte-kit sync && svelte-check --tsconfig tsconfig.json
+
+Loading svelte-check in workspace: d:\dam3\proyecto\frontend\app
+Getting Svelte diagnostics...
+
+d:\dam3\proyecto\frontend\app\[32mnode_modules\typescript\lib\lib.dom.d.ts[39m:23153:11
+[31mError[39m: Interface 'TextDecoder' incorrectly extends interface 'import("node:util").TextDecoder'.
+  Types of property 'decode' are incompatible.
+    Type '(input?: AllowSharedBufferSource | undefined, options?: TextDecodeOptions | undefined) => string' is not assignable to type '(input?: NodeJS.AllowSharedBufferSource | undefined, options?: import("node:util").TextDecodeOptions | undefined) => string'.
+      Types of parameters 'input' and 'input' are incompatible.
+        Type 'NodeJS.AllowSharedBufferSource | undefined' is not assignable to type 'AllowSharedBufferSource | undefined'.
+          Type 'SharedArrayBuffer' is not assignable to type 'AllowSharedBufferSource | undefined'.
+            Type 'SharedArrayBuffer' is missing the following properties from type 'ArrayBuffer': resizable, resize, detached, transfer, transferToFixedLength 
+[36m */
+interface [35mTextDecoder[36m extends TextDecoderCommon {
+    /**[39m
+
+d:\dam3\proyecto\frontend\app\[32mnode_modules\typescript\lib\lib.dom.d.ts[39m:23214:11
+[31mError[39m: Interface 'TextEncoder' incorrectly extends interface 'import("node:util").TextEncoder'.
+  The types returned by 'encode(...)' are incompatible between these types.
+    Type 'Uint8Array<ArrayBufferLike>' is not assignable to type 'NonSharedUint8Array'.
+      Type 'ArrayBufferLike' is not assignable to type 'ArrayBuffer'.
+        Type 'SharedArrayBuffer' is missing the following properties from type 'ArrayBuffer': resizable, resize, detached, transfer, transferToFixedLength 
+[36m */
+interface [35mTextEncoder[36m extends TextEncoderCommon {
+    /**[39m
+
+d:\dam3\proyecto\frontend\app\[32msrc\lib\Login.svelte[39m:86:12
+[33mWarn[39m: '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute (svelte)
+[36m        </label> -->
+        <a [35mhref="#"[36m class="forgot">┬┐Olvidaste tu contrase├▒a?</a>
+      </div>[39m
+
+d:\dam3\proyecto\frontend\app\[32msrc\lib\Profile.svelte[39m:190:17
+[33mWarn[39m: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+[36m            <div class="info-item">
+                [35m<label>Nombre de usuario</label>[36m
+                <p>{$user?.username ?? "Cargando..."}</p>[39m
+
+d:\dam3\proyecto\frontend\app\[32msrc\lib\Profile.svelte[39m:194:17
+[33mWarn[39m: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+[36m            <div class="info-item">
+                [35m<label>Email</label>[36m
+                <p>{$user?.email ?? "Cargando..."}</p>[39m
+
+d:\dam3\proyecto\frontend\app\[32msrc\lib\Profile.svelte[39m:198:17
+[33mWarn[39m: A form label must be associated with a control
+https://svelte.dev/e/a11y_label_has_associated_control (svelte)
+[36m            <div class="info-item">
+                [35m<label>Rol</label>[36m
+                <span class="role-badge">{$user?.role ?? "USER"}</span>[39m
+
+d:\dam3\proyecto\frontend\app\[32msrc\lib\Main.svelte[39m:61:10
+[31mError[39m: Object literal may only specify known properties, and 'activeTab' does not exist in type 'Props'. (ts)
+[36m    <Sidebar
+        {[35mactiveTab[36m}
+        isOpen={sidebarOpen}[39m
+
+d:\dam3\proyecto\frontend\app\[32msrc\routes\login\+page.svelte[39m:79:20
+[33mWarn[39m: '#' is not a valid href attribute
+https://svelte.dev/e/a11y_invalid_attribute (svelte)
+[36m            <div class="actions">
+                <a [35mhref="#"[36m class="forgot">┬┐Olvidaste tu contrase├▒a?</a>
+            </div>[39m
+
+====================================
+[31msvelte-check found 3 errors and 5 warnings in 5 files
+[39m
