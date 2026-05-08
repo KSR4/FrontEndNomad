@@ -94,6 +94,14 @@
     function closeExpirationModal() {
         session.clearExpiration();
     }
+
+    $effect(() => {
+        if (sidebarOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    });
 </script>
 
 {#if session.token || session.sessionExpired}
@@ -185,6 +193,7 @@
         display: flex;
         flex-direction: column;
         height: 100vh;
+        height: 100dvh;
         overflow: hidden;
         min-width: 0;
     }

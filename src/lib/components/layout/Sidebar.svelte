@@ -142,6 +142,7 @@
     .sidebar {
         width: 240px;
         height: 100vh;
+        height: 100dvh;
         position: sticky;
         top: 0;
         background: white;
@@ -153,6 +154,7 @@
         transition: transform 0.3s ease;
         overflow-y: auto;
         scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
     }
 
     .logo {
@@ -249,9 +251,11 @@
             top: 0;
             left: 0;
             height: 100vh;
+            height: 100dvh;
             z-index: 50;
             transform: translateX(-100%);
             box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+            padding-bottom: 5rem; /* Extra space for mobile browser bars */
         }
 
         .sidebar.open {
