@@ -141,6 +141,9 @@
 <style>
     .sidebar {
         width: 240px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
         background: white;
         border-right: 1px solid #e2e8f0;
         padding: 1.5rem;
@@ -148,6 +151,8 @@
         flex-direction: column;
         flex-shrink: 0;
         transition: transform 0.3s ease;
+        overflow-y: auto;
+        scrollbar-width: thin;
     }
 
     .logo {
