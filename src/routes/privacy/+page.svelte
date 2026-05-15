@@ -40,7 +40,7 @@
         </section>
 
         <div class="contact">
-            <p>¿Preguntas sobre tu privacidad? <a href="mailto:privacy@nomad.com">Escríbenos</a></p>
+            <p>¿Preguntas sobre tu privacidad? soporte@nomad-app.com</p>
         </div>
     </div>
 </div>
